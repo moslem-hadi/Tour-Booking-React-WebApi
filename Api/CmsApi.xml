@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CmsApi</name>
+    </assembly>
+    <members>
+        <member name="P:CmsApi.Controllers.BaseController.ApiToken">
+            <summary>
+            توکن کاربر که موقع درخواست ذخیره میکنیم توی این متغیر و در همه کنترل ها در دسترس هست
+            </summary>
+        </member>
+        <member name="M:CmsApi.Controllers.DayanController.ClearCache(System.String,System.String)">
+            <summary>
+            برای وقتی که کاربر فروشگاهشو از پنلش ویرایش میکنه، اینجا کش ریست میشه که دیگه نیازی به صبر کردن نباشه
+            </summary> 
+            <param name="domain"></param>
+            <param name="secretCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:CmsApi.Controllers.AddressDto.Country">
+            <summary>
+            3-letter ISO country code
+            </summary>
+            <example>IIR</example>
+        </member>
+        <member name="P:CmsApi.Controllers.AddressDto.City">
+            <summary>
+            Name of city
+            </summary>
+            <example>Seattle</example>
+        </member>
+        <member name="M:CmsApi.Controllers.TestController.Address(CmsApi.Controllers.AddressDto)">
+            <summary>
+            Asign an address to user
+            </summary>
+            <param name="addressDto">Address of user</param>
+            <remarks>Awesomeness!</remarks>
+            <response code="200">Address added</response>
+            <response code="400">Address has missing/invalid values</response>
+            <response code="500">Oops! Can't create your Address right now</response>
+        </member>
+        <member name="M:CmsApi.Controllers.TestController.CheckVerion">
+            <summary>
+            مثال تست ورژن 1 و 2
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CmsApi.Controllers.TestController.NonActionTest">
+            <summary>
+            مثال از اکشنی که توی ورژن 2 دیگه وجود نداره
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CmsApi.Infrastructure.Authenticate.#ctor(Service.Services.IApiTokenService)">
+            <summary>
+            برای بررسی توکی که کاربر توی هدر ارسال کرده
+            </summary>
+            <param name="apiTokenService"></param>
+        </member>
+        <member name="M:CmsApi.Infrastructure.MiddleWare.CustomExceptionHandlerMiddlewareExtensions.UseCustomExceptionHandler(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            اضافه کردن میدلور برای هندل کردن خطا ها
+            </summary>
+            <param name="builder"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CmsApi.Infrastructure.MiddleWare.RequestLoggingMiddleware">
+            <summary>
+            برای بررسی  و لاگ کردن هر درخواست و پاسخش میشه استفاده بشه
+            </summary>
+        </member>
+        <member name="P:CmsApi.CONSTANTS.MESSEGES.REQUEST_FOR_CLEAR_CACHE_IS_INVALID">
+            <summary>
+            درخواست نا موفق برای دامنه...
+            </summary>
+        </member>
+        <member name="F:CmsApi.Models.ApiResultStatusCode.UnAuthenticated">
+            <summary>
+            عدم احراز هویت
+            </summary>
+        </member>
+        <member name="F:CmsApi.Models.ApiResultStatusCode.UnAuthorized">
+            <summary>
+            عدم دسترسی
+            </summary>
+        </member>
+        <member name="T:CmsApi.Models.CalculatePostPriceViewModel">
+            <summary>
+            مدل برای محاسبه هزینه پستی
+            </summary>
+        </member>
+        <member name="P:CmsApi.Models.CalculatePostPriceViewModel.Products">
+            <summary>
+            لیست کد محصولات
+            </summary>
+        </member>
+        <member name="P:CmsApi.Models.CalculatePostPriceViewModel.DestinationProvinceId">
+            <summary>
+            کد استان مقصد. مثلا تهران 21 هست
+            </summary>
+        </member>
+        <member name="P:CmsApi.Models.CalculatePostPriceViewModel.SendType">
+            <summary>
+            نحوه ارسال:  پیشتار = 0 و سفارشی = 1 
+            </summary>
+        </member>
+        <member name="P:CmsApi.Models.CalculatePostPriceViewModel.PaymentType">
+            <summary>
+            نحوه پرداخت: آنلاین: 1 و در محل: 2
+            </summary>
+        </member>
+        <member name="P:CmsApi.Models.CalculatePostPriceViewModel.Domain">
+            <summary>
+            آدرس سایت همکار
+            </summary>
+        </member>
+        <member name="T:CmsApi.Models.OrderProduct">
+            <summary>
+            محصول در سفارش
+            </summary>
+        </member>
+        <member name="P:CmsApi.Models.OrderProduct.ProductId">
+            <summary>
+            کد محصول
+            </summary>
+        </member>
+        <member name="P:CmsApi.Models.OrderProduct.Count">
+            <summary>
+            تعداد
+            </summary>
+        </member>
+        <member name="T:CmsApi.Models.CalculatePostPriceResultViewModel">
+            <summary>
+            مقدار برگشتی برای تابع درخواست قیمت
+            </summary>
+        </member>
+        <member name="P:CmsApi.Models.CalculatePostPriceResultViewModel.PostPrice">
+            <summary>
+            هزینه پستی
+            </summary>
+        </member>
+        <member name="P:CmsApi.Models.CalculatePostPriceResultViewModel.ProductWeightSum">
+            <summary>
+            جمع وزن محصولات سفارش به گرم
+            </summary>
+        </member>
+        <member name="P:CmsApi.Models.CalculatePostPriceResultViewModel.ProductPriceSum">
+            <summary>
+            جمع قیمت محصولات سفارش به ريال
+            </summary>
+        </member>
+        <member name="T:CmsApi.Models.CalculatePostPriceRequestExample">
+            <summary>
+            پیاده سازی این اینترفیس برای تعیین مقادیر مثال پیشفرش برای سوگر
+            </summary>
+        </member>
+        <member name="T:CmsApi.Models.ExampleViewModelRequestExample">
+            <summary>
+            پیاده سازی این اینترفیس برای تعیین مقادیر مثال پیشفرش برای سوگر
+            </summary>
+        </member>
+        <member name="T:CmsApi.Models.ExampleViewModelResponseExample">
+            <summary>
+            برای مثال خروجی اکشن
+            </summary>
+        </member>
+        <member name="T:CmsApi.Models.AppException">
+            <summary>
+            اکسپشن دستی خودمون
+            </summary>
+        </member>
+        <member name="T:CmsApi.Models.BadRequestException">
+            <summary>
+            درخواست اشتباه
+            </summary>
+        </member>
+        <member name="T:CmsApi.Models.LogicException">
+            <summary>
+            خطای پردازش در سرور
+            </summary>
+        </member>
+        <member name="T:Service.Infrastructure.ApiResultFilterAttribute">
+            <summary>
+            برای اینکه خروجی همه اکشن ها یکسان باشه، این اتریبیون باید گذاشته بشه
+            </summary>
+        </member>
+    </members>
+</doc>

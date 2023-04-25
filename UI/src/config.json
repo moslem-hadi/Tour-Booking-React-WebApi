@@ -1,0 +1,9 @@
+{
+  "ContentFolderUrl": "http://panel.parhantransfer.ir/content/",
+  "ApiUrl": "http://api.parhantransfer.ir/v1",
+  "ApiToken": "4134170d5ae2c0e77ed6f84f48a156d47a0c",
+  "OrderStorageKey": "Order",
+  "MenuLocalStorageKey": "websiteMenu",
+  "FooterMenuLocalStorageKey": "websiteFooterMenu",
+  "RequestHeaders": ["Access-Control-Allow-Origin", ""]
+}

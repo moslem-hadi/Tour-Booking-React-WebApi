@@ -1,0 +1,527 @@
+.navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 30px;
+	padding: 10px 10px 10px 20px;
+	background: #1F2C36;
+	border-radius: 0;
+	margin-bottom: 0;
+	border: none;
+	z-index: 106;
+}
+
+body.boxed .navbar {
+	width: 90%;
+	margin-left: 5%;
+}
+
+body.navbar-teal .navbar {
+	background: #16a085;
+}
+body.navbar-green .navbar {
+	background: #27ae60;
+}
+body.navbar-blue .navbar {
+	background: #2980b9;
+}
+body.navbar-lightblue .navbar {
+	background: #03a9f4;
+}
+body.navbar-cyan .navbar {
+	background: #00bcd4;
+}
+body.navbar-magenta .navbar {
+	background: #8e44ad;
+}
+body.navbar-purple .navbar {
+	background: #9c27b0;
+}
+body.navbar-pink .navbar {
+	background: #e91e63;
+}
+body.navbar-dark .navbar {
+	background: #2c3e50;
+}
+body.navbar-yellow .navbar {
+	background: #f1c40f;
+}
+body.navbar-orange .navbar {
+	background: #d35400;
+}
+body.navbar-red .navbar {
+	background: #c0392b;
+}
+body.navbar-lightgrey .navbar {
+	background: #bdc3c7;
+}
+body.navbar-grey .navbar {
+	background: #7f8c8d;
+}
+body.navbar-white .navbar {
+	background: #fff;
+}
+
+.second-navbar-toggle {
+	display: none;
+	padding: 3px 9px;
+	color: #fff !important;
+	font-family: FontAwesome;
+	font-size: 20px;
+	float: right;
+	cursor: pointer;
+	margin-left: 10px;
+	text-decoration: none !important;
+	margin-top: -2px;
+	transition: all 0.1s ease;
+}
+.second-navbar-toggle:before {
+	content: "\f0c9";
+}
+.second-navbar-toggle:hover {
+	background: rgba(0,0,0,0.3);
+}
+
+.navbar .sidebar-toggle {
+	display: none;
+	margin: -2px -10px 0 10px;
+	float: right;
+}
+
+@media (max-width: 700px) {
+	.navbar .sidebar-toggle {
+		display: block;
+	}
+
+	.second-navbar-toggle {
+		display: block;
+	}
+}
+
+.fr-logo {
+	height: 30px;
+	float: right;
+}
+
+.navbar-options {
+	float: left;
+	height: calc(100% + 20px);
+	margin: -10px 0 0 0;
+}
+.second-navbar .navbar-options {
+	height: calc(100% + 10px);
+}
+
+.navbar-options[class*='block'] {
+	float: none;
+	width: 100%;
+	height: auto;
+}
+
+.navbar-options ul {
+	display: block;
+	height: 100%;
+	margin: 0;
+    padding: 0;
+    list-style: none;
+    float: right;
+}
+.navbar-options[class*='block'] ul {
+	height: auto;
+}
+
+.navbar-options > ul > li {
+	position: relative;
+	display: block;
+	list-style: none;
+	height: 100%;
+	float: right;
+	transition: all 0.05s ease;
+}
+.navbar-options[class*='block'] > ul > li {
+	height: auto;
+}
+
+.navbar-options[class*='block'] > ul > li {
+	position: relative;
+	display: block;
+	float: none;
+}
+
+.navbar-options ul li a, #navbar-popup #navbar-popup-body ul li a {
+	position: relative;
+	display: block;
+	height: 100%;
+	padding: 16px 15px 15px 15px;
+	text-decoration: none;
+	color: rgba(255,255,255,0.5);
+	transition: all 0.05s ease;
+}
+
+body.navbar-lightgrey .navbar-options ul li a {
+	color: rgba(0,0,0,0.6);
+}
+body.navbar-grey .navbar-options ul li a {
+	color: rgba(0,0,0,0.6);
+}
+body.navbar-white .navbar-options ul li a {
+	color: rgba(0,0,0,0.6);
+}
+
+.navbar-options ul li ul a, #navbar-popup #navbar-popup-body ul li a {
+	color: rgba(0,0,0,0.6);
+}
+
+.navbar-options > ul > li.selected > a {
+	background: rgba(255,255,255,0.15);
+	color: #fff;
+}
+
+body.navbar-lightgrey .navbar-options > ul > li.selected > a {
+	background: rgba(0,0,0,0.2);
+}
+body.navbar-grey .navbar-options > ul > li.selected > a {
+	background: rgba(0,0,0,0.2);
+}
+body.navbar-white .navbar-options > ul > li.selected > a {
+	background: rgba(0,0,0,0.2);
+}
+
+.navbar-options[class*='block'] ul li a {
+	height: auto;
+}
+.navbar-options > ul > li:not(.block) > a:hover {
+	color: #fff;
+}
+
+body.navbar-lightgrey .navbar-options > ul > li:not(.block) > a:hover {
+	color: rgba(0,0,0,0.9);
+}
+body.navbar-grey .navbar-options > ul > li:not(.block) > a:hover {
+	color: rgba(0,0,0,0.9);
+}
+body.navbar-white .navbar-options > ul > li:not(.block) > a:hover {
+	color: rgba(0,0,0,0.9);
+}
+
+.navbar-options > ul > li[class*='block']:not(.selected):hover {
+	background: rgba(255,255,255,0.08);
+}
+
+body.navbar-lightgrey .navbar-options > ul > li[class*='block']:not(.selected):hover {
+	background: rgba(0,0,0,0.15);
+}
+body.navbar-grey .navbar-options > ul > li[class*='block']:not(.selected):hover {
+	background: rgba(0,0,0,0.15);
+}
+body.navbar-white .navbar-options > ul > li[class*='block']:not(.selected):hover {
+	background: rgba(0,0,0,0.15);
+}
+
+.navbar-options > ul > li[class*='block']:not(.selected):hover > a {
+	color: #fff;
+}
+
+body.navbar-lightgrey .navbar-options > ul > li[class*='block']:not(.selected):hover > a {
+	color: rgba(0,0,0,0.7);
+}
+body.navbar-grey .navbar-options > ul > li[class*='block']:not(.selected):hover > a {
+	color: rgba(0,0,0,0.7);
+}
+body.navbar-white .navbar-options > ul > li[class*='block']:not(.selected):hover > a {
+	color: rgba(0,0,0,0.7);
+}
+
+.navbar-options ul li a:after {
+	position: absolute;
+	top: calc(50% - 9px);
+	right: 15px;
+	font-family: FontAwesome;
+	font-size: 14px;
+	font-weight: bold;
+	content: "\f107";
+}
+
+.navbar-options > ul > li > ul, #navbar-popup #navbar-popup-body > ul {
+	display: none;
+	position: absolute;
+	top: 50px;
+	right: -0;
+	background: #fff;
+	color: #333 !important;
+	padding: 5px 0 3px 0;
+	border-radius: 0 0 5px 5px;
+	height: auto;
+	min-width: 170px;
+	border: solid thin rgba(0,0,0,0.2);
+	border-top: none;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+	overflow: hidden;
+}
+#navbar-popup #navbar-popup-body > ul {
+	display: block;
+	position: relative;
+	top: 0;
+	right: 0;
+	box-shadow: none;
+	border: none;
+}
+.navbar-options[class*='block'] > ul > li > ul {
+	top: 51px;
+	width: 100%;
+	box-shadow: 0 4px 5px rgba(0,0,0,0.3);
+	z-index: 103;
+}
+
+.navbar-options > ul > li > ul li, #navbar-popup #navbar-popup-body > ul li:not(.separator) {
+	display: block;
+	padding: 0 10px;
+}
+
+.navbar-options > ul > li > ul li > a, #navbar-popup #navbar-popup-body > ul li > a {
+	height: 100%;
+	padding: 6px 12px;
+}
+
+.navbar-options > ul > li > ul li:hover > a, #navbar-popup #navbar-popup-body > ul li:hover > a {
+	color: #000;
+}
+
+.navbar-options > ul > li > ul li:not(.header):hover, #navbar-popup #navbar-popup-body > ul li:not(.header):hover {
+	background: rgba(0,0,0,0.04);
+}
+
+.navbar-options .active, #navbar-popup #navbar-popup-body .active {
+	background: #2C3B48 !important;
+	color: #fff !important;
+}
+
+.second-navbar {
+	display: none;
+	height: 50px;
+	position: fixed;
+	top: 50px;
+	left: 0;
+	width: 100%;
+	background: #131D25;
+	overflow-y: visible;
+	z-index: 105;
+}
+.second-navbar .navbar-content {
+	width: 100%;
+	height: 100%;
+	padding-top: 10px;
+	overflow-x: auto;
+}
+
+.notifications .slimScrollDiv ul, .messages .slimScrollDiv ul {
+	width: 100% !important;
+}
+
+li.notifications a i { font-size: 18px; }
+li.messages a i { font-size: 18px; }
+
+li.messages .commnav a i {
+    font-size: 14px;
+    vertical-align: middle;
+    margin-left: 3px;
+}
+.messages ul .showall, #navbar-popup #navbar-popup-body ul .showall {
+	background: rgba(0,0,0,0.1);
+	margin: 9px -10px -10px -10px;
+	padding: 8px 0;
+	min-width: 350px;
+	border-top: solid thin rgba(0,0,0,0.1);
+	font-size: 14px;
+	text-align: center;
+	cursor: pointer;
+}
+.messages ul .showall:hover, #navbar-popup #navbar-popup-body ul .showall:hover {
+	background: rgba(0,0,0,0.12);
+}
+
+.messages ul .header, .notifications ul .header, #navbar-popup #navbar-popup-body .header {
+	background: rgba(0,0,0,0.1);
+	margin: -5px 0 0 0;
+	padding: 15px 15px 13px 15px !important;
+	min-width: 350px;
+	border-bottom: solid thin rgba(0,0,0,0.05);
+	font-size: 14px;
+}
+
+.messages ul .header i, .notifications ul .header i, #navbar-popup #navbar-popup-body .header i {
+	float: right;
+	cursor: pointer;
+	opacity: 0.6;
+	margin-top: 3px;
+	transition: all 0.1s ease;
+}
+.messages ul .header i:hover, .notifications ul .header i:hover, #navbar-popup #navbar-popup-body .header i:hover {
+	opacity: 1;
+}
+
+.messages ul .header span:last-child, .notifications ul .header span:last-child, #navbar-popup #navbar-popup-body ul .header span:last-child {
+	float: right;
+	cursor: pointer;
+	opacity: 0.6;
+	transition: all 0.1s ease;
+}
+.messages ul .header span:last-child:hover, .notifications ul .header span:last-child:hover, #navbar-popup #navbar-popup-body ul .header span:last-child-hover {
+	opacity: 1;
+}
+
+.notifications ul ul, .messages ul ul, #navbar-popup #navbar-popup-body ul {
+	max-height: 300px;
+	overflow: auto;
+	overflow-x: hidden;
+	margin: 0 -10px -10px -10px;
+}
+#navbar-popup #navbar-popup-body ul {
+	max-height: none;
+	margin: 0;
+}
+
+.notifications .slimScrollDiv, .notifications ul .slimScrollDiv ul, .messages .slimScrollDiv, .messages ul .slimScrollDiv ul {
+	margin: 0 !important;
+}
+
+.notifications ul ul li:not(.header), .messages ul ul li:not(.header), #navbar-popup #navbar-popup-body ul li:not(.header):not(.separator) {
+	padding: 15px;
+	border-bottom: solid thin rgba(0,0,0,0.07);
+}
+.notifications ul ul li:not(.header):after, .messages ul ul li:not(.header):after, #navbar-popup #navbar-popup-body ul li:not(.header):after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.notifications ul ul li:not(.header):hover, .messages ul ul li:not(.header):hover, #navbar-popup #navbar-popup-body ul li:not(.header):hover {
+	background: rgba(0,0,0,0.05);
+}
+
+.messages ul ul li:not(.header) span:first-child .avatar, #navbar-popup #navbar-popup-body ul li:not(.header) span:first-child .avatar {
+	width: 33px;
+	height: 33px;
+}
+
+.notifications ul ul li:not(.header) span:first-child i, #navbar-popup #navbar-popup-body ul li:not(.header) span:first-child i {
+	padding: 12px 15px 15px 13px;
+	width: 36px;
+	height: 36px;
+	text-align: center;
+	background: #5AB8F4;
+	border-radius: 50%;
+	margin-right: 7px;
+	color: #fff;
+}
+
+.notifications ul ul li:not(.header) span, .messages ul ul li:not(.header) span, #navbar-popup #navbar-popup-body ul li:not(.header) span {
+	padding: 0;
+}
+
+.notifications ul ul li:not(.header) > span:nth-child(2), .messages ul ul li:not(.header) > span:nth-child(2), #navbar-popup #navbar-popup-body ul li:not(.header) > span:nth-child(2) {
+	max-width: 250px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.notifications ul ul li:not(.header) > span:nth-child(2) span, .messages ul ul li:not(.header) > span:nth-child(2) span, #navbar-popup #navbar-popup-body ul li:not(.header) > span:nth-child(2) span {
+	display: block;
+	text-align: left;
+	color: rgba(0,0,0,0.35);
+	margin-top: -2px;
+}
+
+.messages ul ul li:not(.header) > span:nth-child(2) span span, #navbar-popup #navbar-popup-body ul li:not(.header) > span:nth-child(2) span span {
+	display: inline-block;
+	color: #3179A2;
+	font-weight: 500;
+	margin-right: 5px;
+}
+
+.notifications ul ul li:not(.header) > span:last-child, .messages ul ul li:not(.header) > span:last-child, #navbar-popup #navbar-popup-body ul li:not(.header) > span:last-child {
+	text-align: right;
+	color: rgba(0,0,0,0.35);
+	margin-top: 8px;
+}
+
+.navbar-search {
+	position: relative;
+	float: right;
+	width: 180px;
+	height: 30px;
+	padding-top: 1px;
+	margin-top: 10px;
+	background: rgba(0,0,0,0.3);
+	border-radius: 20px;
+}
+
+body.navbar-lightgrey .navbar-search{
+	background: rgba(0,0,0,0.15);
+}
+body.navbar-white .navbar-search {
+	background: rgba(0,0,0,0.2);
+}
+
+.navbar-search input {
+	width: 100%;
+	padding: 5px 28px 5px 13px;
+	color: rgba(255,255,255,0.8);
+	border: none;
+	background: transparent;
+}
+
+body.navbar-lightgrey .navbar-search input {
+	color: rgba(0,0,0,0.9);
+}
+body.navbar-white .navbar-search input {
+	color: rgba(0,0,0,0.9);
+}
+
+body.navbar-lightgrey .navbar-search input::-webkit-input-placeholder { color: rgba(0,0,0,0.5) !important; }
+body.navbar-lightgrey .navbar-search input:-moz-placeholder { color: rgba(0,0,0,0.5) !important; }
+body.navbar-lightgrey .navbar-search input::-moz-placeholder { color: rgba(0,0,0,0.5) !important; }
+body.navbar-lightgrey .navbar-search input:-ms-input-placeholder { color: rgba(0,0,0,0.5) !important; }
+body.navbar-white .navbar-search input::-webkit-input-placeholder { color: rgba(0,0,0,0.5) !important; }
+body.navbar-white .navbar-search input:-moz-placeholder { color: rgba(0,0,0,0.5) !important; }
+body.navbar-white .navbar-search input::-moz-placeholder { color: rgba(0,0,0,0.5) !important; }
+body.navbar-white .navbar-search input:-ms-input-placeholder { color: rgba(0,0,0,0.5) !important; }
+
+.navbar-search span:after {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top: 6px;
+	right: 3px;
+	font-family: FontAwesome;
+	content: "\f002";
+	color: rgba(255,255,255,0.7);
+	cursor: pointer;
+}
+.navbar-search span:hover:after {
+	color: #fff;
+}
+
+body.navbar-lightgrey .navbar-search span:after {
+	color: rgba(0,0,0,0.7);
+}
+body.navbar-white .navbar-search span:after {
+	color: rgba(0,0,0,0.7);
+}
+
+body.navbar-lightgrey .navbar-search span:hover:after {
+	color: rgba(0,0,0,0.9);
+}
+body.navbar-white .navbar-search span:hover:after {
+	color: rgba(0,0,0,0.9);
+}
+
+#navbar-popup-body {
+	padding: 0;
+}
+
+#navbar-popup-body ul {
+	padding-left: 0;
+}
+
+.second-navbar .navbar-options{width:180px !important}
