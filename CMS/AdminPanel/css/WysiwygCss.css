@@ -1,0 +1,69 @@
+﻿
+@font-face {
+    font-family: Sans;
+    font-style: normal;
+    font-weight: bold;
+    src: url("/assets/fonts/iransans/eot/IRANSansWeb_Bold.eot");
+    src: url("/assets/fonts/iransans/eot/IRANSansWeb_Bold.eot?#iefix") format("embedded-opentype"),
+    /* IE6-8 */
+    url("/assets/fonts/iransans/woff2/IRANSansWeb_Bold.woff2") format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+    url("/assets/fonts/iransans/woff/IRANSansWeb_Bold.woff") format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url("/assets/fonts/iransans/ttf/IRANSansWeb_Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: Sans;
+    font-style: normal;
+    font-weight: normal;
+    src: url("/assets/fonts/iransans/eot/IRANSansWeb.eot");
+    src: url("/assets/fonts/iransans/eot/IRANSansWeb.eot?#iefix") format("embedded-opentype"),
+    /* IE6-8 */
+    url("/assets/fonts/iransans/woff2/IRANSansWeb.woff2") format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+    url("/assets/fonts/iransans/woff/IRANSansWeb.woff") format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url("/assets/fonts/iransans/ttf/IRANSansWeb.ttf") format("truetype");
+}
+ 
+
+
+body 
+{
+    font:normal 14px "Sans";
+    direction:rtl;
+    line-height:28px;
+    padding:7px;
+}
+
+.htitle, .h1tag  {
+    font-size: 21px;
+    font-weight:bold
+}
+
+.htitlesmall{
+    font-size: 17px;
+    font-weight:bold
+}
+
+.htitle small {
+    font-size:85%
+}
+
+.ltr {
+    direction: ltr;
+}
+
+.center {
+    text-align: center;
+}
+
+.BoldGreen {
+    color: green;
+    font-weight: bold;
+}
+
+.Highlight {
+    background-color: yellow;
+}

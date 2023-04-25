@@ -1,0 +1,225 @@
+﻿
+
+@font-face {
+    font-family: 'nazanin';
+    src: url(font/wpyar-BNazanin.eot);
+    src: url(font/wpyar-BNazanin.eot?#iefix) format('embedded-opentype'),url(font/wpyar-BNazanin.woff) format('woff'),url(font/wpyar-BNazanin.ttf) format('truetype'),url(font/wpyar-BNazanin.svg#fccdc5bfa794389398b92753a275f5cb) format('svg');
+    font-style: normal;
+    font-weight: 200;
+} 
+
+
+@font-face {
+    font-family: 'titr';
+    src: url(font/wpyar-BTitrBold.eot);
+    src: url(font/wpyar-BTitrBold.eot?#iefix) format('embedded-opentype'),url(font/wpyar-BTitrBold.woff) format('woff'),url(font/wpyar-BTitrBold.ttf) format('truetype'),url(font/wpyar-BTitrBold.svg#fccdc5bfa794389398b92753a275f5cb) format('svg');
+    font-style: normal;
+    font-weight: 200;
+} 
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}b {
+    font-weight: bold;  
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.clear{clear:both;display:block;}
+
+body { 
+width :595px;    color: #000;
+margin:0 auto;
+direction:rtl;
+font:normal 17px "nazanin";
+ 
+    font-weight: bold;
+
+}
+ 
+.rightlogo h1{font-size:29px;font-family:"titr"}
+.rightlogo h2{font-size:20px; }
+
+
+.leftinfo{ text-align:left;
+    padding-top: 20px; }
+
+.left{float:left}
+.right{float:right}
+
+.content{padding:10px 15px;}
+
+.infos{margin-top:20px;
+       border:1px solid #888888;
+       border-top:none;overflow:hidden;
+       border-radius:6px;
+       margin-bottom:15px;
+
+}
+.infos h1{background:#B1B1B1;font:normal 16px "titr";text-align:center;border-top:1px solid #888888;border-bottom:1px solid #888888;
+     padding:4px 0;
+}
+.infos h1:first-child
+{
+          border-radius:5px 5px 0 0;
+
+}
+    .infos .right, .infos .left {
+    font-size:18px;font-weight:bold;
+    }
+
+
+
+
+.tablecontainer {
+    border-radius: 6px;
+    border:1px solid #888888;
+    overflow:hidden;    border-top: none;
+}
+    table { 
+color: #333; 
+width: 640px; 
+border-collapse: 
+collapse; border-spacing: 0; 
+          padding:0;margin:0;
+    border: none;
+    overflow: hidden;
+          background-color:#FFFFFF;border-collapse:collapse;color:#003333;width:100%
+}
+
+td, th { 
+border: 1px solid #888888; /* No more visible border */
+height: 30px;
+padding:4px;
+vertical-align:middle;
+text-align:right;
+color:#000;
+ 
+}
+    td:last-child, th:last-child {
+    border-left:none;
+    }
+th {
+background: #B1B1B1;  /* Darken header a bit */
+font-weight: bold;
+text-align:center;
+}
+th:first-child{     border-right: 1px;}
+th:last-child{ }
+
+td {
+background: #FAFAFA;
+text-align: center;
+}
+
+/* Cells in even rows (2,4,6...) are one color */ 
+tr:nth-child(odd) td { background: #F1F1F1; }   
+
+/* Cells in odd rows (1,3,5...) are another (excludes header cells)  */ 
+tr:nth-child(even) td { background: #FEFEFE; }  
+ 
+ 
+        table tr td:first-child {
+            width: 32px;
+        }
+         table tr td:nth-child(4) {
+            width: 38px;
+        }
+         table tr td:nth-child(2)  {
+            width: 276px;
+        }
+         table tr td:nth-child(3)  {
+            width: 90px;
+        } 
+
+         
+         .title{}
+         .subtitle{color:#292929}
+         .present{display:block;
+                  text-align:right;
+                  border-top:1px dashed #101010;
+                  padding-top:2px;
+                  margin-top:5px;
+         }
+
+
+
+
+         .toman{
+    font-size: 14px;
+    color: #101010;
+    margin: 6px;
+    text-align: left;
+}
+
+         .shopinfo{font-size:17px; color:#0E0E0E;line-height:25px;text-align:justify}
+         .url{text-align:left;margin-top:10px;letter-spacing:1px;}
+
+
+         .total{padding:5px 10px; text-align:left;background:#BDBDBD;font-size:15px;}
+
+         
+         .total b{font-size:17px; font-weight:bold}
+
+
+
+
+         .product-price-last {
+    position: relative;
+ font-size:12px; color:#383838;
+    display: inline-block;
+    font-size: 15px!important;
+}
+
+         .product-price-last:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #383838;
+    -moz-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+}
+         small{ font-size:12px;}

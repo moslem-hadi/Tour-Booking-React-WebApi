@@ -1,0 +1,50 @@
+
+ 
+.timer .countdown ul {
+  float: right;
+  width: 100%;
+  height: auto;
+  margin: 0;list-style:none;
+  padding: 0;
+}
+.timer .countdown ul li {
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 24px;
+    font-family: "yekan";
+    color: #fff;
+    background:#484848;
+    margin: 0 3px;
+} 
+.timer .countdown ul li span {
+
+    width: 33px;
+    height: 17px;
+    line-height: 14px;
+    font-family: "sans";
+    font-size: 13px;
+    color: #333;
+    font-weight: 400;
+    background: #B7B7B7;
+    margin: 0 auto;
+    display: block;
+    border-radius: 0 0 5px 5px;
+}
+@media (max-width: 480px) {
+    .timer {
+        top:0px
+    }
+    .timer .countdown ul li span  {
+        display:none
+    }
+}
+
+@media (max-width: 350px) {
+    .timer {
+        display:none
+    }
+}

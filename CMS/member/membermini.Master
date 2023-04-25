@@ -1,0 +1,38 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="membermini.master.cs" Inherits="CMS.member.membermini" %>
+
+
+
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head runat="server" id="head">
+    <meta charset="UTF-8" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    
+    <link href="css/framework.css" rel="stylesheet" />
+ <style>label.title{vertical-align:bottom}</style>
+    <asp:ContentPlaceHolder ID="headContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="min-width:100px; background:#fff;direction:rtl; min-height:100%;">
+<form runat="server" id="form1">
+   
+    <div id="container">
+        <div class="content">
+        <div class="innercontent">
+            <asp:ContentPlaceHolder ID="mainFullContent" runat="server">
+            </asp:ContentPlaceHolder>
+            
+            <div class="sp10">
+            </div>
+             </div>
+        </div> 
+         
+    
+
+    </div> 
+      
+</form>
+</body>
+</html>
+

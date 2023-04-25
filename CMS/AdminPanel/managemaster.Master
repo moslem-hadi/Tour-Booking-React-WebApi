@@ -1,0 +1,186 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="managemaster.master.cs" Inherits="CMS.Manage.managemaster" %>
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head runat="server" id="head">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/adminpanel/css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="/adminpanel/css/style.css" rel="stylesheet" media="screen">
+    <!--[if lt IE 9]>
+      <link href="css/ie-hacks.css" rel="stylesheet" media="screen">
+      <![endif]-->
+    <link rel='shortcut icon' type='image/x-icon' href='images/favicon.ico' />
+    <script src="/adminpanel/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="/adminpanel/js/myJQ.js" type="text/javascript"></script>
+    <link href="/adminpanel/css/bootstrap-responsive.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="HeaderContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body onload="clock()">
+    <form runat="server" id="form1">
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <div id="header">
+                        <div id="logo">
+                            <ul class="userBox">
+                                <li><a href="/adminpanel/addproduct.aspx">افزودن محصول</a></li>
+                                <li><a href="/adminpanel/productlist.aspx">لیست محصولات</a></li>
+                                <li><a href="/adminpanel/userlist.aspx">لیست کاربرها</a></li>
+                                <li><a href="/adminpanel/reservs.aspx">رزروها</a></li>
+                                <li><a href="/adminpanel/paylist.aspx">پرداخت ها</a></li>
+                            </ul>
+                        </div>
+                        <div class="topsrch">
+                            <asp:Panel ID="Panel1" CssClass="con" runat="server" DefaultButton="LinkButton2" Style="width: 350px">
+                                <asp:TextBox ID="TextBox1" runat="server" placeholder="جستجو در عنوان و کد محصول" Width="200px"></asp:TextBox>
+                                <asp:LinkButton CssClass="srchbtn" ID="LinkButton2" runat="server"
+                                    OnClick="LinkButton2_Click"><i class="icon-search"></i></asp:LinkButton>
+                                <br />
+                            </asp:Panel>
+                        </div>
+                        <div id="info">
+                            <ul id="userBox">
+                                <li><a href="http://parhantransfer.ir/">مشاهده سایت</a></li>
+                                <li><a href="/">پنل کاربری</a></li>
+                                <li><a href="/adminpanel/logout.aspx">خروج</a></li>
+                            </ul>
+                        </div>
+                        <div class="clear">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="main">
+            <div class="container bg">
+                <div class="row">
+                    <div class="span3" runat="server" id="divSideBar" >
+                        <div class="sidebar">
+                            <div class="sidebar-options">
+                                <ul class="sidebar-actions">
+                                    <li><a href="/adminpanel/inbox.aspx" title="پیـام ها"><i class="icon-comment"></i></a></li>
+                                    <li><a href="/adminpanel/setting.aspx" title="تنظیمات"><i class="icon-cog"></i></a></li>
+                                    <li><a href="/adminpanel/logout.aspx" title="خروج از مدیریت"><i class="icon-share-alt"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="sidebar-options">
+                                <div class="user-image">
+                                    <img class="img-polaroid" src="images/avat.png" alt="User" width="30">
+                                </div>
+                                <div class="user-info">
+                                    <b><%= userName %></b>
+                                    <p>خوش آمدید</p>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <ul class="side-nav sliding_menu collapsible">
+                                <li><a href="/adminpanel/default.aspx"><span class="icon_dash"></span>داشــبورد</a></li>
+                                <li>
+                                    <a href="#" class="containert"><span class="icon_application-form"></span>محصولات <%=commentcnt %></a>
+                                    <ul class="acitem">
+                                         <li><a href="/adminpanel/addproduct.aspx"><span class="sidenav-icon">
+                                            <span class="sidenav-link-color"></span></span>افزودن محصول</a>
+                                        </li>
+                                        <li><a href="/adminpanel/productlist.aspx"><span class="sidenav-icon">
+                                            <span class="sidenav-link-color"></span></span>لیست محصولات  </a>
+                                        </li> 
+                                        <li><a href="/adminpanel/productgroup.aspx"><span class="sidenav-icon">
+                                            <span class="sidenav-link-color"></span></span>شهر ها  </a>
+                                        </li> 
+                                         
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="/adminpanel/inbox.aspx"><span class="icon_balloon-buzz"></span>پیام ها <%=unread %></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="containert"><span class="icon_view_thumb"></span>محتوا</a>
+                                    <ul
+                                        class="acitem">
+                                        <li><a href="/adminpanel/menu.aspx">
+                                            <span class="sidenav-icon"><span class="sidenav-link-color"></span></span>منو ها</a>
+                                        </li>
+                                   
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="containert"><span class="icon_files"></span>صفحات</a>
+                                    <ul class="acitem">
+                                        <li><a href="/adminpanel/addpage.aspx"><span class="sidenav-icon"><span class="sidenav-link-color"></span></span>افزودن صفحه</a></li>
+                                        <li><a href="/adminpanel/pagelist.aspx"><span class="sidenav-icon"><span
+                                            class="sidenav-link-color"></span></span>لیست صفحات </a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="containert"><span class="icon_usergroup"></span>کاربرها</a>
+                                    <ul class="acitem">
+                                        <li><a href="/adminpanel/adduser.aspx"><span class="sidenav-icon"><span class="sidenav-link-color"></span></span>افزودن کاربر</a></li>
+                                        <li><a href="/adminpanel/userlist.aspx"><span class="sidenav-icon"><span class="sidenav-link-color"></span></span>لیست کاربرها</a></li>
+                                    </ul>
+                                </li>     
+                                <li>
+                                    <a href="#" class="containert"><span class="icon_document-invoice"></span>تیکت ها <%=unreadticket %></a>
+                                    <ul
+                                        class="acitem">
+                                        <li><a href="sendticket.aspx"><span class="sidenav-icon"><span class="sidenav-link-color"></span></span>ارسال تیکت</a></li>
+                                        <li><a href="ticketlist.aspx"><span class="sidenav-icon">
+                                            <span class="sidenav-link-color"></span></span>لیست تیکت ها <%=unreadticket %></a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="containert"><span class="icon_coin_cuprum"></span>مالی </a>
+                                    <ul class="acitem">
+                                        <li><a href="/adminpanel/reservs.aspx"><span class="sidenav-icon"><span class="sidenav-link-color"></span></span>لیست سفارشات  </a></li>
+                                        <li><a href="/adminpanel/paylist.aspx"><span class="sidenav-icon"><span class="sidenav-link-color"></span></span>لیست تراکنش های بانکی</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="containert"><span class="icon_module"></span>دیگــر</a>
+                                    <ul class="acitem">
+                                        <li><a href="/adminpanel/setting.aspx"><span class="sidenav-icon"><span class="sidenav-link-color"></span></span>تنظیمات</a></li>
+                                        <li><a href="/adminpanel/explore.aspx"><span class="sidenav-icon"><span class="sidenav-link-color"></span></span>مدیریت فایل‌ها</a></li>
+                                        <%--<li><a href="/adminpanel/stats.aspx"><span class="sidenav-icon"><span class="sidenav-link-color"></span></span>آمار سایت</a></li>
+                                        <li><a href="/adminpanel/seincome.aspx"><span class="sidenav-icon"><span class="sidenav-link-color"></span></span>ورودی موتورهای جستجو</a></li>--%>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="clear">
+                        </div>
+                        <asp:ContentPlaceHolder ID="SideBarContent" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    <div class="span9" runat="server" id="divMainContent">
+                        <ul class="breadcrumb">
+                            <li><a href="/"><span class="icon_dash"></span>وبسایت</a><span class="divider">&raquo;</span></li>
+                            <li>
+                                <a href="/adminpanel/default.aspx">داشبورد</a><span class="divider">&raquo;</span>
+                            </li>
+                            <asp:Literal ID="ltrmap" runat="server"></asp:Literal>
+                            <li class="dateinbread">
+                                <span class="time" id="jsClock"></span>&nbsp; <i>|</i> &nbsp;
+                           <asp:Literal ID="ltrDate" runat="server"></asp:Literal>
+                            </li>
+                        </ul>
+                        <div class="clear">
+                        </div>
+                        <div id="main-content">
+                            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                            </asp:ContentPlaceHolder>
+                            <div class="clear">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+        <!--[if lt IE 9]><script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script><![endif]-->
+    </form>
+</body>
+</html>

@@ -1,0 +1,41 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="CMS.Main" %>
+
+
+<!DOCTYPE html>
+<html lang="fa">
+<head runat="server" id="head1">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="all,follow" />
+
+
+    <link href="/assets/css/bootstrap-4.4.1.min.css" rel="stylesheet" />
+    <link href="/assets/css/style.css" rel="stylesheet" />
+    <asp:Literal ID="ltrHeadContent" runat="server"></asp:Literal>
+
+    <asp:ContentPlaceHolder ID="cphHead" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body dir="rtl">
+    <form runat="server" id="form1">
+        <div class="container-fluid px-3">
+            <div class="row min-vh-100">
+                <div class="col-md-8 col-lg-6 col-xl-5 d-flex align-items-center">
+                    <div class="w-100 py-5 px-md-5 px-xl-6 position-relative">
+                        <asp:ContentPlaceHolder ID="cphMain" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-6 col-xl-7 d-none d-md-block">
+                    <div style="background-image: url(/assets/img/bg.gif);" class="bg-cover h-100 ml-n3"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <asp:ContentPlaceHolder ID="cphScript" runat="server">
+    </asp:ContentPlaceHolder>
+
+</body>
+</html>
